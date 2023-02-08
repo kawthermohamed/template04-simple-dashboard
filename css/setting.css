@@ -1,0 +1,369 @@
+:root {
+  --main-color: #2196f3;
+  --hover-background: #f5f5f5;
+  --transition-duration: 0.3s;
+  --padding-top: 70px;
+  --padding-bottom: 70px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 950px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* start setting design */
+body {
+  background-color: #eee;
+}
+.setting {
+  display: flex;
+  justify-content: space-between;
+}
+.setting .side-bar {
+  padding: 20px;
+  width: 170;
+  text-align: center;
+  border-right: 1px solid #bbb;
+  box-shadow: 0 0 10px #ddd;
+  z-index: 1;
+  background-color: white;
+}
+
+.side-bar h3 {
+  margin: 20px auto;
+  position: relative;
+}
+.side-bar h3::after {
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: -1;
+}
+.side-bar h3::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border: 2px solid white;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.side-bar ul li {
+  margin-bottom: 20px;
+  padding: 7px;
+}
+.side-bar ul li.active {
+  background-color: #eee;
+
+  border-radius: 4px;
+}
+
+.side-bar ul li i {
+  margin-right: 20px;
+}
+
+.side-bar ul li a {
+  color: gray;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .side-bar ul li i {
+    display: none;
+  }
+}
+.setting .setting-page {
+  flex: 1;
+  background-color: #eee;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+}
+.header .search {
+  position: relative;
+}
+.header .search input {
+  padding: 5px 30px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  width: 150px;
+}
+.header .search input::placeholder {
+  font-size: 12px;
+}
+.header .search i {
+  position: absolute;
+  font-size: 10px;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header .search input:focus {
+  outline: none;
+}
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notification img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.page-cont {
+  padding: 20px;
+}
+.page-cont .st {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 20px;
+}
+.page-cont .st::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    black 0,
+    black 35%,
+    white 35%,
+    white 100%
+  );
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+
+.page-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.box-style {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.box-style h3,
+.box-style h5 {
+  margin-bottom: 10px;
+}
+
+.box-style p {
+  color: grey;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+textarea {
+  width: 100%;
+  border: 1px solid #eee;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.open {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon .cir {
+  width: 40px;
+  height: 20px;
+  background-color: #2196f3;
+
+  border-radius: 20px;
+  position: relative;
+}
+.icon .cir::after {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+}
+
+.fname span,
+.lname span,
+.Email span {
+  display: block;
+  color: gray;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.box1 input {
+  width: 100%;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+.box1 input:focus {
+  outline: none;
+}
+.box1 input::placeholder {
+  font-size: 10px;
+}
+.Email .tex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Email .tex a {
+  color: var(--main-color);
+  font-size: 12px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pass,
+.auth,
+.dev {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pass a,
+.dev a {
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+.pass,
+.auth {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+
+.t,
+.f,
+.y,
+.l {
+  /* padding: 5px; */
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  height: 30px;
+}
+.t,
+.f,
+.l {
+  margin-bottom: 10px;
+}
+.box3 i {
+  color: #ddd;
+  border-right: 1px solid #ddd;
+  width: 30px;
+  text-align: center;
+}
+.box3 input {
+  height: 100%;
+  border: none;
+  background-color: #eee;
+}
+.box3 input:focus {
+  outline: none;
+}
+.box3 input::placeholder {
+  font-size: 12px;
+  padding-left: 5px;
+}
+.bo {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.bo input {
+  margin-right: 10px;
+}
+
+.tt {
+  margin-bottom: 10px;
+}
+.tt input {
+  margin-right: 10px;
+}
+.man {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.man span {
+  display: block;
+}
+.m,
+.z,
+.s {
+  flex: 1;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
